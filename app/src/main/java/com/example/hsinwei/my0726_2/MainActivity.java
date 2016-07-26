@@ -1,3 +1,7 @@
+/**
+ *  menu_main.xml 增加<item />可以增加選項
+ *
+ */
 package com.example.hsinwei.my0726_2;
 
 import android.os.Bundle;
@@ -8,6 +12,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,14 +32,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
+    //menu 選單樣式載入
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
-
+    //menu 選單選項控制
+    //透過 ID 去確認選擇哪一個
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -44,6 +50,11 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            Toast.makeText(MainActivity.this,"Settings",Toast.LENGTH_SHORT).show();
+            return true;
+        }
+        if (id == R.id.action_about) {
+            Toast.makeText(MainActivity.this,"about",Toast.LENGTH_SHORT).show();
             return true;
         }
 
