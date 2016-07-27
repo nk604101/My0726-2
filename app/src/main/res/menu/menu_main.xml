@@ -11,5 +11,6 @@
         android:id="@+id/action_about"
         android:orderInCategory="100"
         android:title="About"
-        app:showAsAction="never" />
+        android:icon="@android:drawable/ic_menu_agenda"
+        app:showAsAction="always" />
 </menu>
